@@ -6,7 +6,7 @@ public class RandomStopThread extends Thread {
 
     @Override
     public void run() {
-        randomQuit();
+        randomInterrupt();
     }
 
     /**
@@ -52,7 +52,7 @@ public class RandomStopThread extends Thread {
                     Thread.currentThread().interrupt();
                 }
             } catch (InterruptedException e) {
-               throw new RuntimeException();
+               //throw new RuntimeException();
             }
         }
     }
